@@ -1,0 +1,103 @@
+﻿@{
+    ViewData["Title"] = "Jobs";
+}
+
+
+<py-env>
+    - numpy
+    - pandas
+    - matplotlib
+    - seaborn
+</py-env>
+
+
+<py-script>
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from pyodide.http import open_url
+url = open_url('data/salaries.csv')
+df = pd.read_csv(url)
+</py-script>
+
+
+<section id="j-wrap">
+
+    <h1>AI Jobs</h1>
+    <p>AI job dataset: Insights AI-Jobs
+        <br />
+        Python source for tables and plots: Kaggle</p>
+
+    <div id="j-stat" class="parallex">
+        <div class="j-stat-item">
+            <h2>Top 10 Company locations (according to the number of employees)</h2>
+            <div class="py-wrap">
+
+                <py-script>
+                    df.head(n=10)
+                </py-script>
+
+            </div>
+        </div>
+
+        <div class="j-stat-item">
+            <h2>Job distribution among top 10 in demand job title</h2>
+            <div class="py-wrap">
+                <py-script>
+                    top_jobs=df.job_title.value_counts()[:10]
+                    n=df.shape[0]
+                    job_distribution=top_jobs*100/n
+                    job_distribution.plot(kind='pie',autopct='%1.0f%%', figsize=(15,8))
+                    plt.title('Job Distribution among top 10 in demand job title')
+                    plt
+                </py-script>
+            </div>
+        </div>
+
+        <div class="j-stat-item">
+            <h2>Salaries in the last 3 years</h2>
+            <div class="py-wrap">
+                <py-script>
+                    plt.clf()
+                    sns.barplot(x='work_year', y='salary_in_usd', data=df)
+                    plt
+                </py-script>
+            </div>
+        </div>
+
+        <div class="j-stat-item">
+            <h2>Salary vs top job titles with their respective employment type</h2>
+            <div class="py-wrap">
+                <py-script>
+                    plt.clf()
+                    top_jobs=df.job_title.value_counts()[:10]
+                    df_top_jobs=df[df.job_title.isin([i for i in top_jobs.index])]
+                    plt.figure(figsize=(15,8))
+                    ax=sns.barplot(x='job_title',y='salary_in_usd',data=df_top_jobs,hue='employment_type')
+                    ax.set_xticklabels(ax.get_xticklabels(), rotation=30, ha='right')
+                    plt.title('Salary VS top job titles with their respective employment type')
+                    plt
+                </py-script>
+            </div>
+        </div>
+
+        <div class="j-stat-item">
+            <h2>Salary vs top job titles with their respective experience level</h2>
+            <div class="py-wrap">
+                <py-script>
+                    plt.clf()
+                    top_jobs=df.job_title.value_counts()[:10]
+                    df_top_jobs=df[df.job_title.isin([i for i in top_jobs.index])]
+                    plt.figure(figsize=(20,10))
+                    ax=sns.boxplot(x='job_title',y='salary_in_usd',data=df_top_jobs,hue='experience_level')
+                    ax.set_xticklabels(ax.get_xticklabels(), rotation=30, ha='right')
+                    plt.title('Salary VS top job titles with their respective experience level')
+                    plt
+                </py-script>
+            </div>
+        </div>
+    </div>
+
+</section>

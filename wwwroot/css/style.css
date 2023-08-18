@@ -1,0 +1,536 @@
+/* Header/Footer Links */
+header, footer{
+    background-color: #222222;
+}
+
+header .nav-link {
+    color: white !important;
+    font-size: 1.2rem;
+}
+
+    footer .nav-link {
+        color: #e8eaed !important;
+        padding: 0.25em 0px;
+        line-height: 40px;
+    }
+
+footer .nav-link:first-child {
+    padding-bottom: 0px;
+}
+
+.social-links span {
+    display: block;
+    line-height: 60px;
+}
+
+.social-links .social-links-wrapper {
+    margin-top: -30px;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px 5px 0px 0px;
+    line-height: 0px;
+}
+
+.social-links .fa {
+    color: #fff;
+    padding: 8px;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    margin-top:20px
+}
+
+.social-links .fa-google {
+    background-color: #dd4b39;
+}
+
+.social-links .fa-youtube {
+    background-color: #bb0000;
+}
+
+.social-links .fa-twitter {
+    background-color: #55acee;
+}
+
+.social-links .fa-facebook {
+    background-color: #3b5998;
+}
+
+.social-links .fa-linkedin {
+    background-color: #007bb5;
+}
+
+
+/* Global Parallex scroll effect */
+
+.parallex {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Home Page CSS */
+
+#first-video{
+    position: relative;
+    height: calc(100vh - 56px);
+    width: 100%;
+}
+
+#first-video-video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -2;
+    object-fit: fill;
+}
+
+#first-video-overlay {
+    background-color: rgba(1,1,1,0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+#first-video-overlay > h1 {
+    font-family: 'Anton', sansserif;
+    background-image: linear-gradient(to right, brown, brown, yellow, white, yellow, brown, brown);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: brown;
+    padding: 15% 5% 0% 5%;
+    text-align: center;
+    font-size: 6em;    
+}
+
+#first-video-overlay > p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    text-align: center;
+    color: #fff;
+    padding: 0% 15%;
+}
+
+#AI-tech{
+    background-image:url('../images/bg1.jpg');
+}
+
+#AI-tech > h1,
+#home-jobs > h1,
+#AI-company > h1{
+    font-family: 'Anton', sansserif;
+    background-image: linear-gradient(to right, brown, brown, yellow, white, yellow, brown, brown);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: brown;
+    padding: 10% 5% 5% 5%;
+    text-align: center;
+    font-size: 3em;
+}
+
+.home-technology{
+    position: relative;
+}
+
+.home-technology figcaption {
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    text-align: center;
+    visibility: hidden;
+}
+
+.home-technology > img {
+    width: 100%;
+    height: 100%;
+}
+
+.home-technology:hover > figcaption {
+    background-color: rgba(0, 0, 0, .5);
+    visibility: visible;
+}
+
+.home-technology h2 {
+    color: yellow;
+    text-shadow: 2px 2px 0px navy, 2px 2px 4px white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.home-technology p {
+    padding: 3%;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.home-technology a {
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#AI-job {
+    background-image: url('../images/bg2.jpg');
+    0padding-bottom: 4em;
+}
+
+#home-jobs img {
+    width: 100%;
+    cursor: pointer;
+    display: none;
+}
+
+.home-company {
+    text-shadow: 2px 2px 0px white, 2px 2px 3px navy;
+    background: linear-gradient(to right, gray, white, gray);
+    color: navy;
+    font-family: Calibri, sans-serif;
+    font-size: 30px;
+    transition: 2s ease;
+    padding-top: 15%;
+    position: relative;
+    height: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.home-company img{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.home-company:hover img {
+    display: block;
+}
+
+.home-company figcaption {
+    position: relative;
+}
+
+/* Jobs Page CSS */
+
+#j-wrap{
+    background-image: url("../images/bg1.jpg");
+}
+
+#j-wrap > h1 {
+    font-family: Arial;
+    padding: 15% 5% 0% 5%;
+    text-align: center;
+    font-size: 6em;
+    text-shadow: 4px 4px 2px navy, 4px 4px 8px white;
+    color: #f8f6b0;
+}
+
+#j-wrap > p {
+    font-family: Arial;
+    font-size: 1.7em;
+    text-align: center;
+    color: #fff;
+    padding: 0% 15%;
+}
+
+#j-stat {
+    background-image: url("../images/bg3.jpg");
+    margin-top: 12em;
+    padding-bottom:4em;
+}
+
+#j-stat h2 {
+    font-family: 'Anton', sansserif;
+    padding: 10% 5% 5% 5%;
+    text-align: center;
+    font-size: 3em;
+    text-shadow: 4px 4px 2px navy, 4px 4px 8px white;
+    color: #f8f6b0;
+}
+
+.j-stat-item .py-wrap{
+    margin: 0px 40px;
+    background-color: white;
+    overflow: auto;
+}
+
+.py-wrap table,
+.py-wrap img {
+    width: 100%;
+}
+
+.py-wrap th {
+    background-color: #000080;
+    color: yellow;
+}
+
+.py-wrap th,
+.py-wrap td {
+    border: 1px solid black;
+    text-align: center
+}
+
+/* Companies Page */
+
+#company-wrap {
+    background-image: url("../images/bg1.jpg");
+}
+
+#company-wrap > h1 {
+    font-family: 'Anton', sansserif;
+    padding: 15% 5% 0% 5%;
+    text-align: center;
+    font-size: 6em;
+    text-shadow: 4px 4px 2px navy, 4px 4px 8px white;
+    color: #f8f6b0;
+}
+
+#company-wrap > p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.55em;
+    text-align: center;
+    color: #fff;
+    padding: 0% 15%;
+}
+
+#companies-list{
+    margin-top:12em;
+}
+
+.company-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.company{
+    background: linear-gradient(to bottom, #ff9933, #ffe6cc, white, white);
+}
+
+
+.company-description > h2 {
+    text-shadow: 2px 2px 0px white, 2px 2px 4px navy;
+    font-family: "Oxygen", sans-serif;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    padding: 5% 5% 20px 5%;
+    text-align: center;
+    font-size: 2em;
+    color: navy;
+}
+
+.company-description > p{
+    padding: 0em 2em 2em 2em;
+}
+/* Contact Page */
+
+#cont-wrap {
+    background-image: url("../images/bg1.jpg");
+    padding-bottom: 1.5em;
+}
+
+#cont-wrap > h1 {
+    font-family: 'Anton', sansserif;
+    background-image: linear-gradient(to right, brown, brown, yellow, white, yellow, brown, brown);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 15% 5% 0% 5%;
+    text-align: center;
+    font-size: 6em;
+}
+
+.contact {
+    box-shadow: 10px 10px 0px 0px #f8f6b0;
+    background-color: rgb(10, 10, 100, 0.5);
+    color: #f8f6b0;
+    min-height: 360px;
+}
+
+.contact h2 {
+    font-family: 'Niconne', cursive;
+    font-size: 2.5em;
+    border-top: 1px solid #f8f6b0;
+    border-bottom: 1px solid #f8f6b0;
+    padding: 0.25em;
+    text-align: center;
+}
+
+.contact p{
+    padding:1em;
+    text-align: center;
+}
+
+.contact a {
+    color: #797382;
+    text-decoration: underline;
+}
+
+/* Media queries */
+@media (min-width: 1200px) { /* Very large desktop/laptop */
+    /*    figure {
+        height: 300px;
+        width: 300px;
+    }
+
+    figcaption {
+        font-size: 3em;
+    }*/
+
+    footer .nav-link {
+        color: gray !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) { /* Large laptop/desktop */
+
+    footer .nav-link {
+        color: gray !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) { /* Laptop/desktop */
+    .contact {
+        min-height: 600px;
+    }
+
+    .contact p{
+        padding: 1em 0;
+    }
+
+
+    footer .nav-link {
+        color: gray !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) { /* Tablet */
+    footer .nav-link {
+        line-height: 50px;
+        padding: 0px;
+    }
+
+    #j-wrap > h1 {
+        font-size: 3em;
+    }
+
+    #j-wrap > p {
+        font-size: 1em;
+        padding: 0% 10%;
+    }
+
+    #j-stat {
+        margin-top: 4em;
+    }
+
+    .j-stat-item .py-wrap {
+        margin: 0px 30px;
+    }
+
+    #company-wrap > h1 {
+        font-size: 4.5em;
+    }
+
+    #company-wrap > p {
+        font-size: 1em;
+        padding: 0% 10%;
+    }
+
+    #companies-list {
+        margin-top: 4em;
+    }
+
+    #cont-wrap h1 {
+        font-size: 4.5em;
+    }
+
+    .contact {
+        box-shadow: unset;
+    }
+
+}
+
+@media (max-width: 576px) { /* Mobile phone */
+    header .nav-link {
+        font-size: .75em;
+    }
+
+    a.navbar-brand {
+        font-size: 1em;
+    }
+
+    a.navbar-brand {
+    }
+
+    footer .nav-link {
+        line-height: 40px;
+        padding: 0px;
+    }
+
+    .social-links-wrapper {
+        margin-bottom: .25rem;
+    }
+
+    footer .nav-link {
+        font-size: .75em;
+        color: gray;
+    }
+
+    .social-links .fa {
+        height: 28px;
+        width: 28px;
+    }
+
+    #j-wrap > h1 {
+        font-size: 3em;
+    }
+
+    #j-wrap > p {
+        font-size: 1em;
+        padding: 0% 10%;
+    }
+
+    #j-stat{
+        margin-top: 4em;
+    }
+
+    .j-stat-item .py-wrap {
+        margin: 0px 20px;
+    }
+        
+    #company-wrap > h1{
+        font-size: 3em;
+    }
+
+    #company-wrap > p {
+        font-size: 1em;
+        padding: 0% 10%;
+    }
+
+    #companies-list {
+        margin-top: 4em;
+    }
+
+    #cont-wrap > h1 {
+        font-size: 3em;
+    }
+
+    .contact {
+        box-shadow: unset;
+    }
+
+}
